@@ -1,6 +1,6 @@
 # Testing Intro: как делаем задание
 
-Статус: в работе. `filterByCategory` закрыт.
+Статус: в работе. `filterByCategory` и `searchProducts` закрыты.
 
 Сдача уже открыта: [PR #1](https://github.com/Bogagree/testing-intro/pull/1), ветка `testing-intro` → `main` форка `Bogagree/testing-intro`. Новые коммиты идут в эту ветку. PR не мержим.
 
@@ -13,7 +13,7 @@
 | Область | Ожидание | Баллы | Статус |
 | --- | --- | --- | --- |
 | `filterByCategory` | девять тестов из таблицы задания | 10 | есть |
-| `searchProducts` | девять тестов из таблицы задания | 10 | нет |
+| `searchProducts` | девять тестов из таблицы задания | 10 | есть |
 | `sortProductsByPrice` | девять тестов из таблицы задания | 10 | нет |
 | `getProductById` | девять тестов из таблицы задания | 10 | нет |
 | `addToCart` | новый товар, объединение одинаковых, проверка количества и остатка | 10 | нет |
@@ -26,11 +26,11 @@
 | Скриншот `npm test` | в описании PR терминал с успешным прогоном | 5 | нет |
 | Скриншот coverage | в описании PR кадр `coverage/lcov-report/index.html` | 5 | нет |
 
-Сейчас закрыт только PR: https://github.com/Bogagree/testing-intro/pull/1. Ветка есть, коммитов с решением ещё нет — строка «Ветка и коммиты» станет `есть` после пяти коммитов из раздела «Порядок работы».
+PR открыт: https://github.com/Bogagree/testing-intro/pull/1. Строка «Ветка и коммиты» станет `есть`, когда в истории будут все пять коммитов из раздела «Порядок работы».
 
 ## Что уже есть
 
-`src/catalog.js` реализован. `filterByCategory.test.js` содержит девять тестов. В `searchProducts.test.js`, `sortProductsByPrice.test.js` и `getProductById.test.js` ещё по девять `test.todo`.
+`src/catalog.js` реализован. `filterByCategory.test.js` и `searchProducts.test.js` содержат по девять тестов. В `sortProductsByPrice.test.js` и `getProductById.test.js` ещё по девять `test.todo`.
 
 `src/cart.js` бросает «Корзина ещё не реализована». `npm run test:cart` должен быть красным, пока функции не написаны.
 
