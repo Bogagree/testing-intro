@@ -1,6 +1,6 @@
 # Testing Intro: как делаем задание
 
-Статус: план принят, решение ещё не писали.
+Статус: в работе. `filterByCategory` закрыт.
 
 Сдача уже открыта: [PR #1](https://github.com/Bogagree/testing-intro/pull/1), ветка `testing-intro` → `main` форка `Bogagree/testing-intro`. Новые коммиты идут в эту ветку. PR не мержим.
 
@@ -12,7 +12,7 @@
 
 | Область | Ожидание | Баллы | Статус |
 | --- | --- | --- | --- |
-| `filterByCategory` | девять тестов из таблицы задания | 10 | нет |
+| `filterByCategory` | девять тестов из таблицы задания | 10 | есть |
 | `searchProducts` | девять тестов из таблицы задания | 10 | нет |
 | `sortProductsByPrice` | девять тестов из таблицы задания | 10 | нет |
 | `getProductById` | девять тестов из таблицы задания | 10 | нет |
@@ -30,7 +30,7 @@
 
 ## Что уже есть
 
-`src/catalog.js` реализован. Четыре файла тестов каталога содержат по девять `test.todo`. Их нужно заменить настоящими `test`.
+`src/catalog.js` реализован. `filterByCategory.test.js` содержит девять тестов. В `searchProducts.test.js`, `sortProductsByPrice.test.js` и `getProductById.test.js` ещё по девять `test.todo`.
 
 `src/cart.js` бросает «Корзина ещё не реализована». `npm run test:cart` должен быть красным, пока функции не написаны.
 
@@ -61,7 +61,9 @@
 Общая проверка списков:
 
 ```js
-expect(result.map(({ id }) => id)).toEqual([1, 2, 3, 4, 5, 6]);
+const allIds = [1, 2, 3, 4, 5, 6];
+const ids = filterByCategory(products, 'all').map(({ id }) => id);
+expect(ids).toEqual(allIds);
 ```
 
 ### filterByCategory
