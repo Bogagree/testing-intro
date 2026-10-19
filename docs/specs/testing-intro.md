@@ -1,6 +1,6 @@
 # Testing Intro: как делаем задание
 
-Статус: часть 1 закрыта. В корзине реализованы `addToCart` и `changeQuantity`.
+Статус: решение в ветке `testing-intro`. Остались скриншоты `npm test` и coverage.
 
 Сдача уже открыта: [PR #1](https://github.com/Bogagree/testing-intro/pull/1), ветка `testing-intro` → `main` форка `Bogagree/testing-intro`. Новые коммиты идут в эту ветку. PR не мержим.
 
@@ -18,21 +18,21 @@
 | `getProductById` | девять тестов из таблицы задания | 10 | есть |
 | `addToCart` | новый товар, объединение одинаковых, проверка количества и остатка | 10 | есть |
 | `changeQuantity` | изменение количества, границы, отсутствующий товар | 10 | есть |
-| `removeFromCart` | удаление выбранного, последнего и отсутствующего товара | 6 | нет |
-| `calculateCartSubtotal` | ноль для пустой корзины и сумма с учётом количества | 6 | нет |
-| `calculateOrderTotal` | скидка `SAVE10`, доставка и итог | 8 | нет |
-| Ветка и коммиты | личный форк, ветка `testing-intro`, история по конвенции RS School | 5 | нет |
+| `removeFromCart` | удаление выбранного, последнего и отсутствующего товара | 6 | есть |
+| `calculateCartSubtotal` | ноль для пустой корзины и сумма с учётом количества | 6 | есть |
+| `calculateOrderTotal` | скидка `SAVE10`, доставка и итог | 8 | есть |
+| Ветка и коммиты | личный форк, ветка `testing-intro`, история по конвенции RS School | 5 | есть |
 | Pull Request | открыт в `main` форка, не замержен, описание по схеме | 5 | есть |
 | Скриншот `npm test` | в описании PR терминал с успешным прогоном | 5 | нет |
 | Скриншот coverage | в описании PR кадр `coverage/lcov-report/index.html` | 5 | нет |
 
-PR открыт: https://github.com/Bogagree/testing-intro/pull/1. Строка «Ветка и коммиты» станет `есть`, когда в истории будут все пять коммитов из раздела «Порядок работы».
+PR открыт: https://github.com/Bogagree/testing-intro/pull/1. История на ветке `testing-intro` идёт коммитами `test:` и `feat:` по конвенции RS School. Корзина разложена на два `feat:` вместо одного коммита из первоначального плана.
 
 ## Что уже есть
 
 `src/catalog.js` реализован. Четыре файла тестов каталога содержат по девять тестов.
 
-`addToCart` и `changeQuantity` реализованы. `removeFromCart`, `calculateCartSubtotal` и `calculateOrderTotal` всё ещё бросают «Корзина ещё не реализована».
+Пять функций корзины реализованы. `calculateOrderTotal` берёт сумму из `calculateCartSubtotal`, скидку `SAVE10` и доставку считает от этой суммы до скидки.
 
 Цены в копейках. Интерфейс и DOM не тестируем.
 
@@ -52,7 +52,8 @@ PR открыт: https://github.com/Bogagree/testing-intro/pull/1. Строка 
 | `test: cover searchProducts` | 9 тестов |
 | `test: cover sortProductsByPrice` | 9 тестов |
 | `test: cover getProductById` | 9 тестов |
-| `feat: implement cart item updates and totals` | `src/cart.js` |
+| `feat: implement addToCart and changeQuantity` | добавление и изменение количества |
+| `feat: remove cart items and calculate order totals` | удаление, сумма товаров и итог заказа |
 
 ## Часть 1. Тесты каталога
 
