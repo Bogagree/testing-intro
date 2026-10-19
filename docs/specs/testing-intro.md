@@ -1,6 +1,6 @@
 # Testing Intro: как делаем задание
 
-Статус: в работе. `filterByCategory`, `searchProducts` и `sortProductsByPrice` закрыты.
+Статус: часть 1 закрыта. Тесты каталога написаны.
 
 Сдача уже открыта: [PR #1](https://github.com/Bogagree/testing-intro/pull/1), ветка `testing-intro` → `main` форка `Bogagree/testing-intro`. Новые коммиты идут в эту ветку. PR не мержим.
 
@@ -15,7 +15,7 @@
 | `filterByCategory` | девять тестов из таблицы задания | 10 | есть |
 | `searchProducts` | девять тестов из таблицы задания | 10 | есть |
 | `sortProductsByPrice` | девять тестов из таблицы задания | 10 | есть |
-| `getProductById` | девять тестов из таблицы задания | 10 | нет |
+| `getProductById` | девять тестов из таблицы задания | 10 | есть |
 | `addToCart` | новый товар, объединение одинаковых, проверка количества и остатка | 10 | нет |
 | `changeQuantity` | изменение количества, границы, отсутствующий товар | 10 | нет |
 | `removeFromCart` | удаление выбранного, последнего и отсутствующего товара | 6 | нет |
@@ -30,7 +30,7 @@ PR открыт: https://github.com/Bogagree/testing-intro/pull/1. Строка 
 
 ## Что уже есть
 
-`src/catalog.js` реализован. `filterByCategory.test.js`, `searchProducts.test.js` и `sortProductsByPrice.test.js` содержат по девять тестов. В `getProductById.test.js` ещё девять `test.todo`.
+`src/catalog.js` реализован. Четыре файла тестов каталога содержат по девять тестов.
 
 `src/cart.js` бросает «Корзина ещё не реализована». `npm run test:cart` должен быть красным, пока функции не написаны.
 
